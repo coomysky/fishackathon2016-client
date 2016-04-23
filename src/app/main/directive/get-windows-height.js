@@ -18,7 +18,6 @@
 
       var currentScreenHeight = screen.availHeight;
       var getHeight = element.css('height');
-      console.log(currentScreenHeight);
 
      element.css('height',currentScreenHeight);
       // element.css('height',768);

@@ -40,10 +40,23 @@
       </div>
       <div class="col-md-6">
         <div class="panel panel-default">
-          <div class="panel-heading">通報紀錄</div>
-          <div class="panel-body" ng-show="!vm.result.report">
+          <div class="panel-heading">通報紀錄 <strong class="pull-right text-danger">{{vm.result.reportStatus}}</strong></div>
+          <div class="panel-body" ng-show="!vm.result.reportStatus">
             尚未有通報紀錄
           </div>
+          <div class="panel-body" ng-show="vm.result.reports">
+            <div class="panel panel-default" ng-repeat="repo in vm.result.reports track by $index">
+              <div class="panel-heading">
+                {{repo.title}}
+                <p class="pull-right">{{repo.date}}</p>
+              </div>
+              <div class="panel-body">
+                <h4>lat: {{repo.location.lat}} lon:{{repo.location.lon}}</h4>
+                <p>{{repo.discription}}</p>
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>
