@@ -5,7 +5,7 @@
         <div class="text-right fish-main__user"> {{vm.user}} | <a ng-click="vm.logout()">Logout</a></div>
         <div class="fish-main__logo"></div>
         <div class="input-group fish-main__input">
-          <input type="number" class="form-control " placeholder="MMSI" ng-keypress="vm.search()" ng-model="vm.mmsi">
+          <input type="number" class="form-control " placeholder="MMSI" ng-keydown="vm.search()" ng-model="vm.mmsi">
           <span class="input-group-btn">
             <button class="btn btn-default" type="button" ui-sref="main.search({mmsi:vm.mmsi})">GO</button>
           </span>

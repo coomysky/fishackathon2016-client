@@ -7,11 +7,11 @@
         .factory('Service', Service);
 
     Service.$inject = ['$http', 'logger', 'config', '$rootScope',
-        '$location','store'
+        '$location','store', '$timeout'
     ];
 
     /* @ngInject */
-    function Service($http, logger, config, $rootScope, $location,store) {
+    function Service($http, logger, config, $rootScope, $location,store, $timeout) {
 
         var service = {
           findMmsiData : findMmsiData,
@@ -309,14 +309,12 @@
         }
 
         function findMmsiData(id){
-          var result = [];
-          if(_.find(exampleMmsiData,{'mmsi':id})){
-            result.push(_.find(exampleMmsiData,{'mmsi':id}));
-            return result;
-          }else{
-            return false;
-          }
+          console.log('in findMmsiData')
 
+          return $http({
+            method: 'GET',
+            url: 'http://0f4f1cb7.ngrok.io/vessel/mmsi/'+ id
+          });
         }
 
         function getNearBoat(){
