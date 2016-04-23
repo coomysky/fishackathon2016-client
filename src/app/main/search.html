@@ -1,12 +1,33 @@
-<h3>MMSI : {{vm.mmsi}}</h3>
+<h3>SEARCH MMSI : {{vm.mmsi}}</h3>
 
 <div class="fish-search__content">
   <div ng-show="vm.result.length >1">
-    <div ng-repeate="boat in vm.result"></div>
+    <div ng-repeat="boat in vm.result" class="fish-search__card" ng-click="vm.setResult(boat)">
+      <div class="row">
+        <div class="col-md-3">
+          <img src="{{boat.image}}" class="img-responsive" alt="Responsive image">
+        </div>
+        <div class="col-md-9">
+          <h4>{{boat.name}}</h4>
+          <dl class="dl-horizontal">
+            <dt>MMSI</dt>
+            <dd>{{boat.mmsi}}</dd>
+            <dt>IMO</dt>
+            <dd>{{boat.imo}}</dd>
+            <dt>Report Status</dt>
+            <dd class="text-danger">{{boat.reportStatus}}</dd>
+            <dt>Country</dt>
+            <dd>{{boat.country}}</dd>
+          </dl>
+
+        </div>
+      </div>
+
+    </div>
   </div>
-  <div ng-show="vm.result">
-    <h1>{{vm.result.name}}</h1>
-    <img src="{{vm.result.image}}" class="img-responsive" alt="Responsive image">
+  <div ng-show="vm.result.length ===1">
+    <h1>{{vm.result[0].name}}</h1>
+    <img src="{{vm.result[0].image}}" class="img-responsive" alt="Responsive image">
     <div class="page-header">
       <h4>詳細資訊 </h4>
     </div>
@@ -18,19 +39,19 @@
             <table class="table table-hover">
               <tr>
                 <th>Name</th>
-                <td>{{vm.result.name}}</td>
+                <td>{{vm.result[0].name}}</td>
               <tr>
               <tr ng-show="vm.result.imo">
                 <th>IMO</th>
-                <td>{{vm.result.imo}}</td>
+                <td>{{vm.result[0].imo}}</td>
               <tr>
               <tr>
                 <th>MMSI</th>
-                <td>{{vm.result.mmsi}}</td>
+                <td>{{vm.result[0].mmsi}}</td>
               <tr>
               <tr>
                 <th>country</th>
-                <td>{{vm.result.country}}</td>
+                <td>{{vm.result[0].country}}</td>
               <tr>
             </table>
 

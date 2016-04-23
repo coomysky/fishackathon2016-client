@@ -309,7 +309,9 @@
         }
 
         function findMmsiData(id){
-          return _.find(exampleMmsiData,{'mmsi':id});
+          var result = [];
+          result.push(_.find(exampleMmsiData,{'mmsi':id}));
+          return reslt;
 
         }
 
