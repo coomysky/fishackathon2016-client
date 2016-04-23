@@ -18,8 +18,8 @@
           init();
 
           function init(){
-            // vm.result = Service.findMmsiData(vm.mmsi);
-            vm.result = Service.queryAllData();
+            vm.result = Service.findMmsiData(vm.mmsi);
+            // vm.result = Service.queryAllData();
 
             console.log(vm.result);
 

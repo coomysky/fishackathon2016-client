@@ -310,8 +310,12 @@
 
         function findMmsiData(id){
           var result = [];
-          result.push(_.find(exampleMmsiData,{'mmsi':id}));
-          return reslt;
+          if(_.find(exampleMmsiData,{'mmsi':id})){
+            result.push(_.find(exampleMmsiData,{'mmsi':id}));
+            return result;
+          }else{
+            return false;
+          }
 
         }
 
