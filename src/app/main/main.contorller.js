@@ -9,7 +9,13 @@
     /* @ngInject */
     function MainController($state,$scope,$rootScope) {
           var vm = this;
+          vm.search = search;
 
+          function search(){
+            $state.go('main.search',{mmsi:vm.mmsi});
+          }
+
+          
 
         }
 

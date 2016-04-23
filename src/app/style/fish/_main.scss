@@ -1,6 +1,11 @@
 .fish-main{
+  &__right{
+    padding: 20px;
+    overflow-y: auto;
+    height: 100%;
+  }
   &__left{
-    height: 1000px;
+    height: 100%;
     width: 100%;
     -webkit-box-shadow: 7px 0px 12px -3px rgba(0,0,0,0.15);
     -moz-box-shadow: 7px 0px 12px -3px rgba(0,0,0,0.15);
@@ -21,6 +26,9 @@
     &>input, &>span>.btn-default{
       height: 40px;
     }
+  }
+  &__user{
+    padding:10px;
   }
   &__nav{
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#32447a+0,404c77+50,243551+51,42497a+100 */
@@ -46,9 +54,8 @@
       background: -webkit-linear-gradient(-45deg, rgba(50,68,122,1) 0%,rgba(64,76,119,1) 50%,rgba(36,53,81,1) 51%,rgba(66,73,122,1) 100%); /* Chrome10-25,Safari5.1-6 */
       background: linear-gradient(135deg, rgba(50,68,122,1) 0%,rgba(64,76,119,1) 50%,rgba(36,53,81,1) 51%,rgba(66,73,122,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32447a', endColorstr='#42497a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-      &:hover{
+      &:hover,&:active,&:focus{
         color:#ffe600;
-        background: rgb(15, 54, 75) !important;
         cursor: pointer;
       }
 

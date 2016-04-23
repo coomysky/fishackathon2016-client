@@ -39,6 +39,78 @@
               controllerAs: 'vm'
           }
 
+        },{
+          state: 'main.near',
+          abstract: true,
+          config: {
+              url: '/near',
+              data: {
+                  requiresLogin: false
+              },
+              views: {
+                  '': {
+                    templateUrl: 'app/main/near.html',
+                    controller: 'MainNearController',
+                    controllerAs: 'vm'
+                  }
+              }
+
+          }
+
+        },{
+          state: 'main.report',
+          abstract: true,
+          config: {
+              url: '/report',
+              data: {
+                  requiresLogin: false
+              },
+              views: {
+                  '': {
+                    templateUrl: 'app/main/report.html',
+                    // controller: 'MainNearController',
+                    // controllerAs: 'vm'
+                  }
+              }
+
+          }
+
+        },{
+          state: 'main.query',
+          abstract: true,
+          config: {
+              url: '/query',
+              data: {
+                  requiresLogin: false
+              },
+              views: {
+                  '': {
+                    templateUrl: 'app/main/query.html',
+                    controller: 'MainQueryController',
+                    controllerAs: 'vm'
+                  }
+              }
+
+          }
+
+        },{
+          state: 'main.search',
+          abstract: true,
+          config: {
+              url: '/search/:mmsi',
+              data: {
+                  requiresLogin: false
+              },
+              views: {
+                  '': {
+                    templateUrl: 'app/main/search.html',
+                    controller: 'MainSearchController',
+                    controllerAs: 'vm'
+                  }
+              }
+
+          }
+
         }];
     }
 })();

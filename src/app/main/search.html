@@ -1,0 +1,56 @@
+<h3>MMSI : {{vm.mmsi}}</h3>
+
+<div class="fish-search__content">
+  <div ng-show="vm.result.length >1">
+    <div ng-repeate="boat in vm.result"></div>
+  </div>
+  <div ng-show="vm.result">
+    <h1>{{vm.result.name}}</h1>
+    <img src="{{vm.result.image}}" class="img-responsive" alt="Responsive image">
+    <div class="page-header">
+      <h4>詳細資訊 </h4>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">船</div>
+          <div class="panel-body">
+            <table class="table table-hover">
+              <tr>
+                <th>Name</th>
+                <td>{{vm.result.name}}</td>
+              <tr>
+              <tr ng-show="vm.result.imo">
+                <th>IMO</th>
+                <td>{{vm.result.imo}}</td>
+              <tr>
+              <tr>
+                <th>MMSI</th>
+                <td>{{vm.result.mmsi}}</td>
+              <tr>
+              <tr>
+                <th>country</th>
+                <td>{{vm.result.country}}</td>
+              <tr>
+            </table>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">通報紀錄</div>
+          <div class="panel-body" ng-show="!vm.result.report">
+            尚未有通報紀錄
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <div ng-show="vm.result.length === 0 || !vm.result" class="fish-search__fail"></div>
+
+
+</div>

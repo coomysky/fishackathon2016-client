@@ -8,6 +8,16 @@ p{
     color: rgb(120, 120, 120);
 }
 
+a{
+  cursor: pointer;
+  &:hover{
+    cursor: pointer;
+  }
+}
+.angular-google-map-container {
+  height: 800px;
+  width: 80%;
+}
 .shadow-bottom{
   border-top: 1px #EEEEEE solid;
   width: 100%;

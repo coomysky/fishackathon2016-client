@@ -1,0 +1,10 @@
+.fish-search{
+  &__fail{
+    background: url('../assets/images/notfound.svg');
+    width: 80%;
+    height: 500px;
+    background: cover;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+  }
+}

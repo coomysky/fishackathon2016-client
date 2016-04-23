@@ -8,6 +8,6 @@
             'blocks.exception', 'blocks.logger', 'blocks.router',
             'ui.router', 'ngplus', 'ui.bootstrap', 'angular-ladda',
             'angular-jwt', 'angular-storage', 'ngDialog','slickCarousel', 'ngMaterial', 'angular-momentjs',
-            'angularRandomString'
+            'angularRandomString', 'uiGmapgoogle-maps','ngTable'
         ]);
 })();
