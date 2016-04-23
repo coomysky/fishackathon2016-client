@@ -12,6 +12,18 @@
           <input type="text" class="form-control" placeholder="事件名稱" ng-model="vm.repo.title">
         </div>
         <div class="form-group">
+          <label>船名</label>
+          <input type="text" class="form-control" ng-model="vm.repo.name">
+        </div>
+        <div class="form-group">
+          <label>MMIS</label>
+          <input type="text" class="form-control" placeholder="MMIS" ng-model="vm.repo.mmis">
+        </div>
+        <div class="form-group">
+          <label>IMO</label>
+          <input type="text" class="form-control" placeholder="IMO" ng-model="vm.repo.imo">
+        </div>
+        <div class="form-group">
           <label>通報座標位置</label>
           <input type="number" class="form-control" placeholder="lat" ng-model="vm.repo.lat">
           <input type="number" class="form-control" placeholder="lon" ng-model="vm.repo.lon">
@@ -41,5 +53,6 @@
 <h3><strong>你的座標</strong> (lat: {{vm.map.center.latitude}} lon:  {{vm.map.center.longitude}})</h3>
 
 <ng-map zoom="4" center="[{{vm.map.center.latitude}},{{vm.map.center.longitude}}]" style="height:800px;">
-    <marker position="[{{marker.lastLoca.lat}}, {{marker.lastLoca.lon}}]" title="{{marker.name}}, {{marker.mmsi}}" ng-repeat=" marker in vm.blackList"></marker>
+  <marker position="[{{marker.lastLoca.lat}}, {{marker.lastLoca.lon}}]"
+    title="{{marker.name}}, {{marker.mmsi}}" ng-repeat=" marker in vm.blackList"></marker>
 </ng-map>

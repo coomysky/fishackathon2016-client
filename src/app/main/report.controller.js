@@ -14,6 +14,11 @@
           vm.map = { center: { latitude: 23.18, longitude: 123.15 }, zoom: 8 };
 
           vm.blackList = Service.queryBlackList();
+          vm.clickMarker = clickMarker;
+
+          function clickMarker(){
+            console.log('testClick');
+          }
 
           vm.tableParams = new NgTableParams({
              page: 1,

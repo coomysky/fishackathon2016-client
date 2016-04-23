@@ -26,7 +26,9 @@
     function link(scope, elem, attrs){
       scope.close = close;
       scope.open = open;
-      scope.isOpen = false;
+      // scope.isOpen = false;
+
+      scope.isOpen = true;
 
 
       function close(){
