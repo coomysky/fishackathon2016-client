@@ -1,0 +1,47 @@
+.wc-ad{
+  padding:20px 10px 200px 10px;
+  background: $brown;
+  background-image: url('../assets/images/wedding_pic2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  text-align: center;
+  &__title{
+    font-size: 3em;
+    font-weight: bolder;
+    margin-top: 80px;
+    border-bottom: 1px $brown solid;
+    padding-bottom: 20px;
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -15px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 15px 7.5px 0 7.5px;
+      border-color: #e8e8e8 transparent transparent transparent;
+      z-index: 2;
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      left: 49.9%;
+      bottom: -16px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 16px 8px 0 8px;
+      border-color: $brown transparent transparent transparent;
+    }
+  }
+  &__talk{
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 80%;
+    font-size: 1.8em;
+  }
+}

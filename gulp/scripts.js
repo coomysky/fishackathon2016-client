@@ -3,7 +3,6 @@
 var path = require('path');
 var gulp = require('gulp');
 var conf = require('./conf');
-var babel = require('gulp-babel');
 
 var browserSync = require('browser-sync');
 
@@ -15,8 +14,4 @@ gulp.task('scripts', function () {
     .pipe($.jshint.reporter('jshint-stylish'))
     .pipe(browserSync.reload({ stream: true }))
     .pipe($.size())
-    .pipe(babel({
-        presets: ['es2015']
-    }))
-    
 });

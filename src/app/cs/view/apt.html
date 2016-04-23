@@ -1,9 +1,0 @@
-<!-- Show apt if aptId exist -->
-<li class="list-group-item" ng-click="vm.clickApt(vm.data)" ng-show="vm.data.aptId" style="height: 40px;" ng-mouseover="vm.aptHoverIn()" ng-mouseleave="vm.aptHoverOut()">
-	<i class="fa fa-book" aria-hidden="true" ></i>
-  <span class="pull-right" ng-show="vm.aptHovered" style="">
-      {{vm.data.startTime | limitTo:2}}:{{vm.data.startTime | limitTo:2:2}}
-      -
-      {{vm.data.endTime | limitTo:2}}:{{vm.data.endTime | limitTo:2:2}}
-  </span>
-</li>

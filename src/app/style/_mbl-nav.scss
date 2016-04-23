@@ -1,0 +1,38 @@
+.wc-mbl-nav{
+  background: rgba($brown, 0.8);
+  position: fixed;
+  padding: 0;
+  z-index: 3;
+  top:68px;
+  width: 100%;
+
+  text-align: center;
+  &__list{
+    padding: 0;
+    margin: 0;
+  }
+  &__li{
+    width: 15%;
+    &.active{
+      background: rgba($brown, 1);
+      &>a{
+        color: $pink-l;
+        text-decoration: none;
+      }
+    }
+    &:hover{
+      background: rgba($brown, 1);
+      &>a{
+        color: $pink-l;
+        text-decoration: none;
+      }
+    }
+    &>a{
+      color:rgba(#ffffff, 0.8);
+      height: 30px;
+      width: 100%;
+      display: inline-block;
+      line-height:30px;
+    }
+  }
+}

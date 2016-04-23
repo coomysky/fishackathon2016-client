@@ -3,7 +3,6 @@
 var path = require('path');
 var gulp = require('gulp');
 var conf = require('./conf');
-var babel = require('gulp-babel');
 
 var $ = require('gulp-load-plugins')({
     pattern: ['gulp-*', 'main-bower-files', 'uglify-save-license',
@@ -22,7 +21,7 @@ gulp.task('partials', function() {
             quotes: true
         }))
         .pipe($.angularTemplatecache('templateCacheHtml.js', {
-            module: 'ams',
+            module: 'wc',
             root: 'app'
         }))
         .pipe(gulp.dest(conf.paths.tmp + '/partials/'));

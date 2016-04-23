@@ -1,0 +1,17 @@
+(function() {
+    'use strict';
+
+    angular.module('app.core')
+        .constant('config', {
+            appErrorPrefix: '[WC Error] ',
+            appTitle: 'WedChat',
+            locale: 'en_US',
+            debugMode: true,
+            tablePageCount: 50,
+            bootstrapDateFormat: 'yyyy/mm/dd hh:ii:ss',
+            bootstrapSDateFormat: 'yyyy/mm/dd hh:ii',
+            dateFormat: 'yyyy/MM/dd hh:mm',
+            domain: 'www.wedchat.com',
+            apiUrl: 'server/action/'
+        });
+}());

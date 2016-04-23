@@ -1,73 +1,42 @@
-.main{
-  position: absolute;
-  top:80px;
-}
-
 body{
   height: 100%;
-  background: $gray-6;
-  color:$black-3;
-  font-family: $font-default;
-
+  background: rgba(#f0f0f0, 0.35);
+  color:$brown;
+  font-family: 'arial';
 }
-
 p{
-  color: $d-blue;
+    color: rgb(120, 120, 120);
 }
 
-.top-shadow{
-  border-bottom: 1px $gray-4 solid;
+.shadow-bottom{
+  border-top: 1px #EEEEEE solid;
   width: 100%;
-  height: 15px;
-  background-image: -webkit-radial-gradient(50% 100%, 50% 1em,rgba($gray-3,0.3),rgba(243, 243, 251, 0));
-  background-image: -moz-radial-gradient(50% 100%, 50% 1em,rgba($gray-3,0.3),rgba(243, 243, 251, 0));
+  height: 20px;
+  margin: 10px 0;
+  background-image: -webkit-radial-gradient(50% 0%, 50% 1em,rgb(239, 239, 239),white);
+  background-image: -moz-radial-gradient(50% 0%, 50% 1em,rgb(239, 239, 239),white);
   background-repeat: repeat-y;
   padding: 2px;
 }
-.margin{
-  &-buttom{
-    &-none{
-      margin-bottom: 0;
-    }
-  }
-  &-none{
-    margin: 0;
-  }
+.container{
+  width: 80%;
 }
 
-a{
-  color:$pink;
-  cursor: pointer;
-  &:hover{
-    text-decoration: none;
+[ng-click]{
+  border:0;
+  &:hover,&:active,&:visited{
+    outline: none;
+    border: 0;
   }
 }
-
-.ellipse-tag{
-  display: inline-block;
-  padding: 5px 20px 5px 20px;
-  border-radius: 20px;
-  background: $pink;
-  cursor: pointer;
-  margin: 1px;
-  &.-sm{
-    font-size: 12px;
-    padding: 3px 15px 3px 15px;
-    border-radius: 15px;
-  }
-  &:hover{
-    background: $d-pink-2;
-  }
-  &>a{
-    color:#fff;
-    text-decoration: none;
-  }
-  &__remove{
-    margin-left: 5px;
-    &:hover{
-      color:$black-3;
-    }
-  }
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
 
 
+
+@media screen and (max-width:$lg) {
+  .container{
+    width: 100%;
+  }
 }

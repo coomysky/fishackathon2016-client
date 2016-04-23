@@ -3,28 +3,53 @@
 
     var core = angular.module('app.core');
 
-    core.config(function($locationProvider) {
-      $locationProvider.html5Mode(true);
-    });
-    core.config(function(calendarConfig) {
+    core.config(toastrConfig);
 
-    console.log(calendarConfig); //view all available config
+    toastrConfig.$inject = ['toastr'];
+    /* @ngInject */
+    function toastrConfig(toastr) {
+        toastr.options.timeOut = 4000;
+        toastr.options.positionClass = 'toast-bottom-right';
+    }
+
+    core.config(materialThemConfig);
+    materialThemConfig.$inject = ['$mdThemingProvider'];
+
+    function materialThemConfig($mdThemingProvider) {
+        $mdThemingProvider.theme('default')
+            .primaryPalette('orange');
+    }
 
 
-      calendarConfig.dateFormatter = 'moment'; //use either moment or angular to format dates on the calendar. Default angular. Setting this will override any date formats you have already set.
+    core.config(configure);
 
-      calendarConfig.allDateFormats.moment.date.hour = 'HH:mm'; //this will configure times on the day view to display in 24 hour format rather than the default of 12 hour
+    configure.$inject = ['$logProvider', '$httpProvider',
+        'routerHelperProvider', 'exceptionHandlerProvider',
+        'jwtInterceptorProvider', 'laddaProvider', 'config',
+        '$locationProvider'
+    ];
+    /* @ngInject */
+    function configure($logProvider, $httpProvider, routerHelperProvider,
+        exceptionHandlerProvider, jwtInterceptorProvider, laddaProvider,
+        config, $locationProvider) {
+        if ($logProvider.debugEnabled) {
+            $logProvider.debugEnabled(true);
+        }
 
-      calendarConfig.allDateFormats.moment.title.day = 'ddd D MMM'; //this will configure the day view title to be shorter
+        $locationProvider.hashPrefix('!');
 
-      calendarConfig.i18nStrings.weekNumber = '{week}'; //This will set the week number hover label on the month view
+        // $httpProvider.interceptors.push('authInterceptor');
+        // $httpProvider.interceptors.push('jwtInterceptor');
 
-      calendarConfig.displayAllMonthEvents = true; //This will display all events on a month view even if they're not in the current month. Default false.
+        laddaProvider.setOption({
+            style: 'zoom-out'
+        });
 
-      calendarConfig.displayEventEndTimes = true; //This will display event end times on the month and year views. Default false.
+        exceptionHandlerProvider.configure(config.appErrorPrefix);
+        routerHelperProvider.configure({
+            docTitle: config.appTitle + ': '
+        });
 
-      calendarConfig.showTimesOnWeekView = true; //Make the week view more like the day view, with the caveat that event end times are ignored.
-
-  });
+    }
 
 })();
