@@ -7,8 +7,14 @@
 
     // HomeController.$inject = ['config', 'logger', '$scope', '$timeout'];
     /* @ngInject */
-    function HomeController($state,$scope,$rootScope) {
+    function HomeController($state,$scope,$rootScope,store) {
           var vm = this;
+          vm.login = login;
+
+          function login(){
+            store.set('user', vm.account);
+            $state.go('main');
+          }
 
 
         }

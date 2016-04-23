@@ -1,0 +1,45 @@
+
+<tool-tip>
+  <div class="fish-tool__content">
+    <div class="pull-right">
+      <a ng-click="vm.blackListShow=false">通報可疑船隻</a>｜<a ng-click="vm.blackListShow=true">黑名單</a>
+    </div>
+    <div ng-show="!vm.blackListShow">
+      <h3 class="fish-tool__title">通報可疑船隻</h3>
+      <form>
+        <div class="form-group">
+          <label>標題</label>
+          <input type="text" class="form-control" placeholder="事件名稱" ng-model="vm.repo.title">
+        </div>
+        <div class="form-group">
+          <label>通報座標位置</label>
+          <input type="number" class="form-control" placeholder="lat" ng-model="vm.repo.lat">
+          <input type="number" class="form-control" placeholder="lon" ng-model="vm.repo.lon">
+        </div>
+        <div class="form-group">
+          <label>描述</label>
+          <textarea class="form-control" placeholder="描述"ng-model="vm.repo.description"> </textarea>
+        </div>
+        <button type="submit" class="btn fish-tool__btn">Send</button>
+      </form>
+    </div>
+    <div ng-show="vm.blackListShow">
+      <h3 class="fish-tool__title">黑名單</h3>
+      <table ng-table="vm.tableParams" show-filter="true" class="table table-bordered table-striped">
+        <tr ng-repeat="row in $data ">
+          <td title="'Boat Name'" filter="{name: 'text'}" sortable="'name'"><a ui-sref="main.search({mmsi:row.mmsi})">{{row.name}}</a></td>
+          <td title="'MMSI'" filter="{mmsi: 'text'}" sortable="'mmsi'"><a ui-sref="main.search({mmsi:row.mmsi})">{{row.mmsi}}</a></td>
+          <td title="'Last Location'"><a ui-sref="main.search({mmsi:row.mmsi})">({{row.lastLoca.lat}},{{row.lastLoca.lon}})</a></td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+
+
+</tool-tip>
+<h3><strong>你的座標</strong> (lat: {{vm.map.center.latitude}} lon:  {{vm.map.center.longitude}})</h3>
+
+<ng-map zoom="4" center="[{{vm.map.center.latitude}},{{vm.map.center.longitude}}]" style="height:800px;">
+    <marker position="[{{marker.lastLoca.lat}}, {{marker.lastLoca.lon}}]" title="{{marker.name}}, {{marker.mmsi}}" ng-repeat=" marker in vm.blackList"></marker>
+</ng-map>

@@ -68,8 +68,8 @@
               views: {
                   '': {
                     templateUrl: 'app/main/report.html',
-                    // controller: 'MainNearController',
-                    // controllerAs: 'vm'
+                    controller: 'MainReportController',
+                    controllerAs: 'vm'
                   }
               }
 

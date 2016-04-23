@@ -15,7 +15,9 @@
             // fix ui-router when
             // http://stackoverflow.com/questions/27120308/angular-ui-router-urlrouterprovider-when-not-working-when-i-click-a-ui-sref
             var defaultRoutes = {
-            
+              'main': {
+                  targetState: 'main.near'
+              },
             };
 
             if (defaultRoutes[toState.name]) {
