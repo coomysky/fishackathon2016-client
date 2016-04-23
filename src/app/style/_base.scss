@@ -1,0 +1,73 @@
+.main{
+  position: absolute;
+  top:80px;
+}
+
+body{
+  height: 100%;
+  background: $gray-6;
+  color:$black-3;
+  font-family: $font-default;
+
+}
+
+p{
+  color: $d-blue;
+}
+
+.top-shadow{
+  border-bottom: 1px $gray-4 solid;
+  width: 100%;
+  height: 15px;
+  background-image: -webkit-radial-gradient(50% 100%, 50% 1em,rgba($gray-3,0.3),rgba(243, 243, 251, 0));
+  background-image: -moz-radial-gradient(50% 100%, 50% 1em,rgba($gray-3,0.3),rgba(243, 243, 251, 0));
+  background-repeat: repeat-y;
+  padding: 2px;
+}
+.margin{
+  &-buttom{
+    &-none{
+      margin-bottom: 0;
+    }
+  }
+  &-none{
+    margin: 0;
+  }
+}
+
+a{
+  color:$pink;
+  cursor: pointer;
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+.ellipse-tag{
+  display: inline-block;
+  padding: 5px 20px 5px 20px;
+  border-radius: 20px;
+  background: $pink;
+  cursor: pointer;
+  margin: 1px;
+  &.-sm{
+    font-size: 12px;
+    padding: 3px 15px 3px 15px;
+    border-radius: 15px;
+  }
+  &:hover{
+    background: $d-pink-2;
+  }
+  &>a{
+    color:#fff;
+    text-decoration: none;
+  }
+  &__remove{
+    margin-left: 5px;
+    &:hover{
+      color:$black-3;
+    }
+  }
+
+
+}

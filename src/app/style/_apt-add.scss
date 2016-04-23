@@ -1,0 +1,28 @@
+.apt-add{
+
+  &__pop{
+    &--row{
+      margin: 0;
+    }
+    &--btn{
+      width: 100%;
+      border-radius: 0;
+      background: $black-3;
+      color: $pink;
+      margin-top: 20px;
+      padding: 10px;
+      &:hover,&:active,&:focus{
+        background: $black-2;
+        color:$pink-3;
+      }
+    }
+  }
+}
+
+
+.ngdialog.apt-add__pop .ngdialog-content{
+  border-radius: 0;
+  width: 100%;
+  max-width: 800px;
+  padding-bottom: 80px;
+}

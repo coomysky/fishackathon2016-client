@@ -1,0 +1,92 @@
+<div class="apt-add__pop">
+  <h3 class="apt-add__pop--title"> + CREATE APPOINTMENT</h3>
+
+  <form name="aptCreateForm" novalidate>
+    <div class="form-group ">
+      <div class="row apt-add__pop--row">
+        <div class="col-sm-6">
+          <label for="storeLocation">Store: <strong>{{data.store.name}}</strong></label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="row apt-add__pop--row">
+        <div class="col-sm-6">
+          <label for="storeLocation">Appointment Date *</label>
+          <p class="input-group">
+            <input type="text" class="form-control" ng-change="getCreateAptTimes()" uib-datepicker-popup="yyyy-MM-dd" ng-model="apt.createDate" is-open="showDatepicker" required/>
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-default" ng-click="openDatepicker()"><i class="glyphicon glyphicon-calendar"></i></button>
+            </span>
+          </p>
+
+        </div>
+        <div class="col-sm-6" ng-show="gotCreateAptTimeList">
+          <label for="aptTime">Appointment Time *</label>
+          <select id="aptTime" class="form-control" ng-model="apt.time" ng-show="gotCreateAptTimeList.length>0" required>
+            <option ng-repeat="aptTime in gotCreateAptTimeList" value="{{aptTime}}" ng-show="aptTime.count - aptTime.aptIds.length>0">
+              {{aptTime.timeInterval}}   -  only {{aptTime.count - aptTime.aptIds.length}} left
+            </option>
+            <option ng-repeat="aptTime in gotCreateAptTimeList" value="{{aptTime}}" ng-show="aptTime.count - aptTime.aptIds.length === 0">
+              {{aptTime.timeInterval}}   -  Full
+            </option>
+
+          </select>
+          <p ng-show="gotCreateAptTimeList.length === 0">放假</p>
+        </div>
+      </div>
+      <div class="row apt-add__pop--row">
+        <div class="col-sm-6">
+          <label for="serviceType">Service Type *</label>
+          <select id="serviceType" class="form-control" ng-model="apt.serviceType" required>
+            <option ng-repeat="serviceType in data.serviceType" value="{{serviceType}}">{{serviceType}}</option>
+          </select>
+        </div>
+        <div class="col-sm-6">
+          <label for="createBy">Create By *</label>
+          <select id="createBy" class="form-control" ng-model="apt.clerk" required>
+            <option ng-repeat="clerk in data.clerks" value="{{clerk}}">{{clerk.name}}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="row apt-add__pop--row">
+        <h6>Bridal info</h6>
+        <div class="col-sm-6">
+          <label for="bridalEmail">Email *</label>
+          <input type="email" class="form-control" id="bridalEmail" placeholder="Bridal's Email" ng-model="apt.email" required ng-blur="checkEmail()">
+        </div>
+        <div class="col-sm-6">
+          <label for="bridalPhoen">Phone</label>
+          <input type="text" class="form-control" placeholder="Bridal's Phone" ng-model="apt.phone" maxlength="10"  ng-bind="apt.phone|tel"  ng-pattern="/^(1-?)?(\([2-9]\d{2}\)|[2-9]\d{2})?[-. ]?[2-9]\d{2}?[-. ]?\d{4}$/">
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="row apt-add__pop--row">
+        <div class="col-sm-6">
+          <label for="firstName">First Name *</label>
+          <input type="text" class="form-control" id="firstName" placeholder="Bridal's First Name" ng-model="apt.firstName" required>
+        </div>
+        <div class="col-sm-6">
+          <label for="lastName">Last Name *</label>
+          <input type="text" class="form-control" id="lastName" placeholder="Bridal's Last Name" ng-model="apt.lastName" required>
+        </div>
+      </div>
+    </div>
+
+    <div class="row apt-add__pop--row">
+      <div class="col-sm-12">
+          <p class="text-danger" ng-show="aptCreateForm.$invalid">* 為必填欄位</p>
+          <button type="submit" class="btn apt-add__pop--btn" ng-click="createApt()" ng-disabled="aptCreateForm.$invalid">Submit {{apt.phone | tel}}</button>
+      </div>
+
+
+  </form>
+
+
+
+
+</div>

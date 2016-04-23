@@ -1,0 +1,19 @@
+<div class="apt-cards" >
+  <div class="apt-cards__item" ng-repeat="apt in apts" >
+    <div ng-click="onOpen({apt:apt})">
+      <h3 class="apt-cards__item--title">{{apt.id}}</h3>
+      <p class="apt-cards__item--p"><i class="fa fa-user"></i> {{apt.name}}</p>
+      <p class="apt-cards__item--p"><i class="fa fa-phone"></i> {{apt.phone}}</p>
+      <p class="apt-cards__item--p"><i class="fa fa-envelope"></i> {{apt.email}}</p>
+    </div>
+    <ul class="nav nav-pills pull-right" ng-show="!isFinishedApt(apt)">
+      <li role="presentation" ng-show="!apt.status.id"><a class="apt-cards__item--btn" ng-click="onCancel({apt:apt})" >cancel</a></li>
+      <li role="presentation" ng-show="!apt.status.id && apt.showConfirm"><a class="apt-cards__item--btn" ng-click="onConfirm({apt:apt})" >confirm</a></li>
+      <li role="presentation" ng-show="apt.status.id "><a class="apt-cards__item--btn">Check in by {{apt.clerk.name}}</a></li>
+    </ul>
+    <ul class="nav nav-pills pull-right" ng-show="isFinishedApt(apt)">
+      <li role="presentation" ng-show="apt.complete "><a class="apt-cards__item--btn">Complete</a></li>
+      <li role="presentation" ng-show="!apt.complete "><a class="apt-cards__item--btn">Incompelte</a></li>
+    </ul>
+  </div>
+</div>

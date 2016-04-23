@@ -1,0 +1,86 @@
+<!-- Header -->
+<div class="cs-dialog__header">
+	<label class="cs-dialog__header--first"></label>
+	<label class="cs-dialog__header--second"></label>
+	<label class="cs-dialog__header--third"></label>
+	<label class="cs-dialog__header--forth"></label>
+</div>
+
+<!-- Main Dialog -->
+<div class="cs-dialog">
+	<div class="row">
+		<h3 class="cs-dialog__apt--bar">
+			+ Create Apt
+			<i class="fa fa-lg fa-times-circle-o cs-dialog__close" aria-hidden="true" ng-click="ngDialogClose()"></i>
+		</h3>
+		<div>
+			<label class="cs-dialog__apt--label">Apt Date:</label> 2016/04/30
+		</div>
+		<div>
+			<label class="cs-dialog__apt--label">Location:</label>
+			<select class="cs-dialog__select">
+			  <option></option>
+			</select>
+		</div>
+		<div>
+			<label class="cs-dialog__apt--label">Service Type:</label>
+			<select class="cs-dialog__select">
+			  <option></option>
+			</select>
+		</div>
+		<div>
+			<label class="cs-dialog__apt--label">Event:</label>
+			<select class="cs-dialog__select">
+			  <option></option>
+			</select>
+		</div>
+	<!-- Bridal Contact -->
+		<h3 class="cs-dialog__bridal--bar">Bridal Contact</h3>
+		<div>
+			<label class="cs-dialog__bridal--label">Email</label>
+			<input class="cs-dialog__bridal--input" placeholder="Bridal Email"/>
+		</div>
+		<div>
+			<label class="cs-dialog__bridal--label">First Name</label>
+			<input class="cs-dialog__bridal--input" placeholder="Bridal Name"/>
+		</div>
+		<div>
+			<label class="cs-dialog__bridal--label">Last Name</label>
+			<input class="cs-dialog__bridal--input" placeholder="Bridal Name" />
+		</div>
+		<div>
+			<label class="cs-dialog__bridal--label">Best Contact Number</label>
+			<input class="cs-dialog__bridal--input" placeholder="0000-000 0000" />
+		</div>
+		<div>
+			<label class="cs-dialog__bridal--label--full">Bridal Apt Notes</label>
+			<textarea class="cs-dialog__bridal--textarea" rows="3" placeholder="Bridal note, want a pizza."></textarea>
+		</div>
+
+	<!-- other -->
+		<h3 class="cs-dialog__other--bar">Other</h3>
+		<div >
+			<label class="cs-dialog__other--label">Heard Via:</label>
+			<select class="cs-dialog__select">
+			  <option></option>
+			</select>
+		</div>
+		<div >
+			<label class="cs-dialog__other--label">Apt Notes: </label>
+			<textarea class="cs-dialog__other--textarea" rows="3" placeholder="Need to use Top Quality and Top Service. This is OBAMA coming.!!"></textarea>
+		</div>
+		<div>
+			<input type="checkbox" ng-model="checkboxModel.value1">
+			<label class="cs-dialog__other--label">Tuedo Lead</label>
+		</div>
+	</div>
+	<button class="cs-dialog__button" ng-click="createApt()">CREATE APPOINTMENT</button>
+</div>
+
+<!-- Footer -->
+<div class="cs-dialog__footer">
+	<label class="cs-dialog__footer--first"></label>
+	<label class="cs-dialog__footer--second"></label>
+	<label class="cs-dialog__footer--third"></label>
+	<label class="cs-dialog__footer--forth"></label>
+</div>

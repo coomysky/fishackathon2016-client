@@ -1,0 +1,108 @@
+vm.createAptInit = {
+  clerks:[
+    {
+      name:'ken',
+      id:1
+    },
+    {
+      name:'coomy',
+      id:2
+    },
+    {
+      name:'Brian',
+      id:3
+    },
+  ],
+  serviceType:['try wedding dress','選伴娘禮服'],
+  store:{id:'0',name:'L.A Store 1'}
+};
+vm.testCreate = testCreate;
+vm.testSend = testSend;
+vm.checkEmail = checkEmail;
+
+function checkEmail(email){
+  console.log(email);
+  var deferred = $q.defer();
+
+  setTimeout(function() {
+    var user = '';
+    deferred.resolve(user);
+  }, 1000);
+
+  return deferred.promise;
+
+}
+
+function testSend(apt){
+  console.log(apt);
+}
+
+function testCreate(date){
+  var deferred = $q.defer();
+
+  setTimeout(function() {
+    if (date) {
+      var timelist = [
+        [
+          {
+            startTime:'0900',
+            endTime:'1000',
+            aptId:'123'
+          },
+          {
+            startTime:'1000',
+            endTime:'1100',
+            aptId:'123'
+          },
+          {
+            startTime:'1100',
+            endTime:'1200',
+            aptId:'123'
+          },
+          {
+            startTime:'1300',
+            endTime:'1400',
+            aptId:'123'
+          },
+          {
+            startTime:'1400',
+            endTime:'1500',
+            aptId:'123'
+          },
+          {
+            startTime:'1500',
+            endTime:'1600',
+            aptId:'123'
+          }
+        ],[
+          {
+            startTime:'0900',
+            endTime:'1000',
+          },
+          {
+            startTime:'1000',
+            endTime:'1100',
+          },
+          {
+            startTime:'1100',
+            endTime:'1200',
+            aptId:'123'
+          },
+          {
+            startTime:'1300',
+            endTime:'1430',
+            aptId:'123'
+          },
+        ]
+      ];
+      deferred.resolve(timelist);
+    } else {
+      deferred.reject();
+    }
+  }, 1000);
+
+  return deferred.promise;
+}
+
+<store-apt-add data="vm.createAptInit" on-create-apt-open="vm.testCreate(date)"
+on-create-apt-send ="vm.testSend(apt)" on-check-mail="vm.checkEmail(email)"></stroe-apt-add>

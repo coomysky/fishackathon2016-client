@@ -1,0 +1,9 @@
+<div class="row">
+	<div ng-repeat="store in vm.data">
+		<div class="col-sm-4">
+			<svg id="{{store.storeId}}" width="100%" height="200" ng-click="vm.storeClick(store.storeId)"></svg>
+		</div>
+	</div>
+	<h1 class="cs-store__bar"></h1>
+</div>
+<h4>Address: {{vm.storeInfo.address}}, Phone: {{vm.storeInfo.phone}}</h4>
