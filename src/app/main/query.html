@@ -8,8 +8,8 @@
     <tr ng-repeat="row in $data ">
       <td title="'Boat Picture'">
         <a ui-sref="main.search({mmsi:row.mmsi})">
-          <img src="/assets/images/notfound.svg" class="img-responsive" alt="Responsive image" ng-show="!row.image">
-          <img src="{{row.image}}" ng-show="row.image" class="img-responsive" alt="Responsive image">
+          <img src="/assets/images/notfound.svg" class="img-responsive" alt="Responsive image" ng-show="!row.image" style="max-width:200px;">
+          <img src="{{row.image}}" ng-show="row.image" class="img-responsive" alt="Responsive image" style="max-width:200px;">
         </a>
       </td>
       <td title="'Boat Name'" filter="{name: 'text'}" sortable="'name'"><a ui-sref="main.search({type:'mmsi',id:row.mmsi})">{{row.name}}</a></td>
