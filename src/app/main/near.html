@@ -4,9 +4,9 @@
     <h3 class="fish-tool__title">附近船隻名單</h3>
     <table ng-table="vm.tableParams" show-filter="true" class="table table-bordered table-striped">
       <tr ng-repeat="row in $data ">
-        <td title="'Boat Name'" filter="{name: 'text'}" sortable="'name'"><a ui-sref="main.search({mmsi:row.mmsi})">{{row.name}}</a></td>
-        <td title="'MMSI'" filter="{mmsi: 'text'}" sortable="'mmsi'"><a ui-sref="main.search({mmsi:row.mmsi})">{{row.mmsi}}</a></td>
-        <td title="'Last Location'"><a ui-sref="main.search({mmsi:row.mmsi})">({{row.lastLoca.lat}},{{row.lastLoca.lon}})</a></td>
+        <td title="'Boat Name'" filter="{name: 'text'}" sortable="'name'"><a ui-sref="main.search({type:'mmsi',id:row.mmsi})">{{row.name}}</a></td>
+        <td title="'MMSI'" filter="{mmsi: 'text'}" sortable="'mmsi'"><a ui-sref="main.search({type:'mmsi',id:row.mmsi})">{{row.mmsi}}</a></td>
+        <td title="'Last Location'"><a ui-sref="main.search({type:'mmsi',id:row.mmsi})">({{row.lastLoca.lat}},{{row.lastLoca.lon}})</a></td>
       </tr>
     </table>
   </div>

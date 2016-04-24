@@ -325,7 +325,12 @@
         }
 
         function queryAllData(){
-          return exampleMmsiData;
+
+          return $http({
+            method: 'GET',
+            url: config.apiUrl+'vessel/limit/30/offset/0'
+          });
+
         }
 
     }

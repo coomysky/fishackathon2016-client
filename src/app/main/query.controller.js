@@ -9,14 +9,22 @@
     /* @ngInject */
     function MainQueryController($state,NgTableParams,Service) {
           var vm = this;
-          
-          vm.tableParams = new NgTableParams({
-             page: 1,
-             count: 10
-           }, {
-             filterDelay: 0,
-             data: Service.queryAllData()
-           });
+          vm.result = [];
+          vm.isLoading = true;
+
+          Service.queryAllData().then(function(res){
+            vm.result = res.data;
+            vm.tableParams = new NgTableParams({
+               page: 1,
+               count: 10
+             }, {
+               filterDelay: 0,
+               data: vm.result
+             });
+             vm.isLoading = false;
+          });
+
+
         }
 
 })();

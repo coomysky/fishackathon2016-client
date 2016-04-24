@@ -5,7 +5,8 @@
     <div ng-repeat="boat in vm.result" class="fish-search__card" ng-click="vm.setResult(boat)">
       <div class="row">
         <div class="col-md-3">
-          <img src="{{boat.image}}" class="img-responsive" alt="Responsive image">
+            <img src="/assets/images/notfound.svg" class="img-responsive" alt="Responsive image" ng-show="!boat.image">
+          <img src="{{boat.image}}" class="img-responsive" alt="Responsive image" ng-show="boat.image">
         </div>
         <div class="col-md-9">
           <h4>{{boat.name}}</h4>
@@ -27,7 +28,30 @@
   </div>
   <div ng-show="vm.result.length ===1">
     <h1>{{vm.result[0].name}}</h1>
-    <img src="{{vm.result[0].image}}" class="img-responsive" alt="Responsive image">
+
+    <div class="row">
+      <div class="col-md-6">
+        <img src="{{vm.result[0].image}}" class="img-responsive" alt="Responsive image">
+      </div>
+      <div class="col-md-6">
+        <div class="fish-search__card" ng-repeat="lic in vm.result[0].licence">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="fish-search__license -{{lic.source}}"></div>
+            </div>
+            <div class="col-md-9">
+              <h4>License</h4>
+                <b>{{lic.source }}</b>
+                {{lic.date_aut_start | limitTo:10}},
+                {{lic.date_aut_end | limitTo:10}}
+              </dl>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
     <div class="page-header">
       <h4>詳細資訊 </h4>
     </div>
@@ -84,7 +108,10 @@
     </div>
 
   </div>
-  <div ng-show="vm.result.length === 0 || !vm.result" class="fish-search__fail"></div>
-
+  <div ng-show="vm.result.length === 0 || !vm.result && !vm.isLoading" class="fish-search__fail"></div>
+  <!-- <div class="spinner2" ng-show"vm.isLoading">
+    <div class="double-bounce1"></div>
+    <div class="double-bounce2"></div>
+  </div> -->
 
 </div>

@@ -3,7 +3,7 @@
     background: url('../assets/images/notfound.svg');
     width: 80%;
     height: 500px;
-    background: cover;
+    background-size: cover;
     background-repeat: no-repeat;
     margin-top: 50px;
   }
@@ -15,5 +15,29 @@
     -moz-box-shadow: 3px 3px 5px -4px rgba(0,0,0,0.75);
     box-shadow: 3px 3px 5px -4px rgba(0,0,0,0.75);
     margin-bottom: 5px;
+  }
+  &__license{
+    background: url('../assets/images/notfound.svg');
+    height: 100px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &.-CCBT{
+      background-image: url('../assets/images/ccbt.jpg');
+    }
+    &.-IATTC{
+      background-image: url('../assets/images/lattc.jpg');
+    }
+    &.-ICCAT{
+      background-image: url('../assets/images/iccat.gif');
+    }
+    &.-IOTC{
+      background-image: url('../assets/images/iotc.jpg');
+    }
+    &.-WCPFC{
+      background-image: url('../assets/images/lwcpfc.png');
+    }
+
   }
 }
