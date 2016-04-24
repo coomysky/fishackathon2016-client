@@ -40,7 +40,7 @@ module.exports = function(config) {
 
         ngHtml2JsPreprocessor: {
             stripPrefix: 'src/',
-            moduleName: 'ams'
+            moduleName: 'wc'
         },
 
         browsers: ['PhantomJS'],

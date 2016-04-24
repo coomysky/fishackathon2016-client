@@ -1,4 +1,5 @@
 (function() {
   'use strict';
-    angular.module('app.main', ['app.core','app.cs']);
+
+  angular.module('app.main', ['app.core']);
 })();

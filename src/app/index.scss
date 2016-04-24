@@ -4,29 +4,33 @@
  */
 
 // @import url(https://www.google.com/fonts#ChoosePlace:select/Collection:Dancing+Script:400,700|Tangerine:400,700);
-$navbar-inverse-link-color: #ED7774;
-$icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+$navbar-inverse-link-color: #5AADBB;
+$icon-font-path: "../../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 
-@import 'style/setting';
-@import 'style/color';
-@import 'style/animate';
-@import 'style/base';
-@import 'style/store-buttons';
-@import 'style/store-main';
-@import 'style/store-header';
-@import 'style/apt-cards';
-@import 'style/apt-check';
-@import 'style/cs-store';
-@import 'style/apt-add';
-@import 'style/cs-dialog';
-@import 'style/store-setting';
-@import 'style/tool-tip';
+
 /**
  *  Do not remove this comments bellow. It's the markers used by wiredep to inject
  *  sass dependencies when defined in the bower.json of your dependencies
  */
 // bower:scss
 // endbower
+
+@import 'style/setting';
+@import 'style/base';
+@import 'style/header';
+@import 'style/wrapper';
+@import 'style/side-nav';
+@import 'style/speaker';
+@import 'style/chat';
+@import 'style/ad';
+@import 'style/how-work';
+@import 'style/footer';
+@import 'style/mbl-nav';
+@import 'style/fish/landing';
+@import 'style/fish/main';
+@import 'style/fish/search';
+@import 'style/fish/tool-tip';
+@import 'style/fish/tool';
 
 /**
  *  Do not remove this comments bellow. It's the markers used by gulp-inject to inject

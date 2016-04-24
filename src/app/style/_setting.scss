@@ -1,4 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=Poiret+One|Muli:400,300,300italic,400italic|Hind:400,300,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Tangerine:400,700);
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
+
+$pink:#FFA598;
+$pink-d:#f9705c;
+$pink-l:#fbc0c0;
+$brown:#534741;
+$brown-d:#372e2a;
+$wrapper-height:550px;
 
 
 $xs:768px;
@@ -6,7 +14,4 @@ $md:996px;
 $lg:1700px;
 $mac:1280px;
 
-$font-default:'Hind', sans-serif;
-$font-title: 'Muli', sans-serif;
-
-$store-contaner-padding-top:100px;
+$font-strong:'Dancing Script', cursive;
