@@ -25,7 +25,7 @@
           {
             'name':'SY MAGIC',
             'imo':0,
-            'mmsi':'235018912',
+            'mmsi':'228128000',
             'country':'Flag of United Kingdom',
             'image':'https://static.vesselfinder.net/ship-photo/0-235018912-d6c013359da2bbdd3e77bddd123c5830/0',
             lastLoca:{
@@ -36,7 +36,7 @@
           {
             'name':'MERRY FISHER',
             'imo':8519318,
-            'mmsi':'249566000',
+            'mmsi':'367033480',
             'country':'Flag of Malta',
             'image':'https://static.vesselfinder.net/ship-photo/8519318-249566000-885de2b08e9a1c0186d5a59e73ec33db/0',
             lastLoca:{
@@ -47,7 +47,7 @@
           {
             'name':'MELTEMI',
             'imo':9172442,
-            'mmsi':'529642000',
+            'mmsi':'273528800',
             'country':'Flag of Kiribati',
             'image':'https://static.vesselfinder.net/ship-photo/9172442-529642000-e8a98b1d12f9c62fef4aa19b74f47b2d/0',
             lastLoca:{

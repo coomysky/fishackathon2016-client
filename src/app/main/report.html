@@ -36,7 +36,7 @@
       </form>
     </div>
     <div ng-show="vm.blackListShow">
-      <h3 class="fish-tool__title">黑名單</h3>
+      <h3 class="fish-tool__title">黑名單<p class="pull-left"ng-show="vm.isLoading"><i class="fa fa-spinner fa-spin fa-fw margin-bottom"></i></p></h3>
 
       <table ng-table="vm.tableParams" show-filter="true" class="table table-bordered table-striped">
         <tr ng-repeat="row in $data ">
@@ -51,7 +51,7 @@
 
 
 </tool-tip>
-<h3><strong>你的座標</strong> (lat: {{vm.map.center.latitude}} lon:  {{vm.map.center.longitude}})</h3>
+<h3><strong>你的座標</strong> (lat: {{vm.map.center.latitude}} lon:  {{vm.map.center.longitude}}) <p class="pull-left"ng-show="vm.isLoading"><i class="fa fa-spinner fa-spin fa-fw margin-bottom"></i></h3>
 
 <ng-map zoom="4" center="[{{vm.map.center.latitude}},{{vm.map.center.longitude}}]" style="height:800px;">
   <marker position="[{{marker.lat}}, {{marker.lng}}]"
