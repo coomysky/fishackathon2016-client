@@ -7,7 +7,7 @@
         <div class="input-group fish-main__input">
           <input type="number" class="form-control " placeholder="MMSI" ng-keydown="vm.search()" ng-model="vm.mmsi">
           <span class="input-group-btn">
-            <button class="btn btn-default" type="button" ui-sref="main.search({mmsi:vm.mmsi})">GO</button>
+            <button class="btn btn-default" type="button" ui-sref="main.search({type:'mmsi',id:vm.mmsi})">GO</button>
           </span>
         </div>
         <ul class="nav nav-pills nav-stacked fish-main__nav ">

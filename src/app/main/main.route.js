@@ -97,7 +97,7 @@
           state: 'main.search',
           abstract: true,
           config: {
-              url: '/search/:mmsi',
+              url: '/search/:type/:id',
               data: {
                   requiresLogin: false
               },

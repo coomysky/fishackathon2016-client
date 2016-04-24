@@ -305,15 +305,18 @@
 
 
         function queryBlackList(){
-          return exampleBlackList;
+          return $http({
+            method: 'GET',
+            url: config.apiUrl + 'blacklist',
+          });
         }
 
-        function findMmsiData(id){
-          console.log('in findMmsiData')
+        function findMmsiData(id,type){
+          console.log('in findMmsiData');
 
           return $http({
             method: 'GET',
-            url: 'http://0f4f1cb7.ngrok.io/vessel/mmsi/'+ id
+            url: config.apiUrl + 'vessel/'+type+'/'+id,
           });
         }
 

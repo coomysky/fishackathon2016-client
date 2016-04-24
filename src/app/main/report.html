@@ -37,11 +37,12 @@
     </div>
     <div ng-show="vm.blackListShow">
       <h3 class="fish-tool__title">黑名單</h3>
+
       <table ng-table="vm.tableParams" show-filter="true" class="table table-bordered table-striped">
         <tr ng-repeat="row in $data ">
-          <td title="'Boat Name'" filter="{name: 'text'}" sortable="'name'"><a ui-sref="main.search({mmsi:row.mmsi})">{{row.name}}</a></td>
-          <td title="'MMSI'" filter="{mmsi: 'text'}" sortable="'mmsi'"><a ui-sref="main.search({mmsi:row.mmsi})">{{row.mmsi}}</a></td>
-          <td title="'Last Location'"><a ui-sref="main.search({mmsi:row.mmsi})">({{row.lastLoca.lat}},{{row.lastLoca.lon}})</a></td>
+          <td title="'Boat Name'" filter="{name: 'text'}" sortable="'name'"><a ui-sref="main.search({type:'imo',id:row.imo})">{{row.name}}</a></td>
+          <td title="'MMSI'" filter="{imo: 'text'}" sortable="'imo'"><a ui-sref="main.search({type:'imo',id:row.imo})">{{row.imo}}</a></td>
+          <td title="'Last Location'"><a ui-sref="main.search({type:'imo',id:row.imo})">({{row.lat}},{{row.lng}})</a></td>
         </tr>
       </table>
     </div>
@@ -53,6 +54,6 @@
 <h3><strong>你的座標</strong> (lat: {{vm.map.center.latitude}} lon:  {{vm.map.center.longitude}})</h3>
 
 <ng-map zoom="4" center="[{{vm.map.center.latitude}},{{vm.map.center.longitude}}]" style="height:800px;">
-  <marker position="[{{marker.lastLoca.lat}}, {{marker.lastLoca.lon}}]"
-    title="{{marker.name}}, {{marker.mmsi}}" ng-repeat=" marker in vm.blackList"></marker>
+  <marker position="[{{marker.lat}}, {{marker.lng}}]"
+    title="{{marker.name}}, {{marker.imo}}" ng-repeat=" marker in vm.blackList"></marker>
 </ng-map>

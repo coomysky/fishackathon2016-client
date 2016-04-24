@@ -14,7 +14,7 @@
           vm.logout = logout;
 
           function search(){
-            $state.go('main.search',{mmsi:vm.mmsi});
+            $state.go('main.search',{type:'mmsi',id:vm.mmsi});
           }
 
           function logout(){
