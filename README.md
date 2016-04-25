@@ -1,6 +1,6 @@
 ### For fishackathon in Taipe
 
-### Client Demo : http://coomysky.github.io/flash-client/#!/main/near  
+### Client Demo : http://coomysky.github.io/fishackathon2016-client/#!/  
 帳號密碼 : 任意打都可以進去 因為沒server XDDDDDD~ (逃  
 
 40小時 fishackathon Taipei Demo 成品  
