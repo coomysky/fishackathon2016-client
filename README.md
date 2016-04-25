@@ -41,8 +41,9 @@ P.S. 有存storege 所以有登入過就不需要在登入了 但是姐花了時
 
 **Team-member:**
 
-    - <a href="https://www.linkedin.com/in/demon-tsai-262071ab?authType=NAME_SEARCH&authToken=1_Yl&locale=zh_TW&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CclickedEntityId%3A391311146%2CauthType%3ANAME_SEARCH%2Cidx%3A1-1-1%2CtarId%3A1461568883944%2Ctas%3ADemo">DemonTsai</a> 
+    **Demon Tsai**  
+    https://www.linkedin.com/in/demon-tsai-262071ab?authType=NAME_SEARCH&authToken=1_Yl&locale=zh_TW&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CclickedEntityId%3A391311146%2CauthType%3ANAME_SEARCH%2Cidx%3A1-1-1%2CtarId%3A1461568883944%2Ctas%3ADemo
 
-    - Ed - [https://github.com/ultralabed](https://github.com/ultralabed)
-    - Blackie - [https://github.com/blackie0424](https://github.com/blackie0424)
-    - Coomy - [https://www.linkedin.com/in/coomy-chang-36454492?trk=nav_responsive_tab_profile_pic](https://www.linkedin.com/in/coomy-chang-36454492?trk=nav_responsive_tab_profile_pic)
+    - Ed https://github.com/ultralabed
+    - Blackie https://github.com/blackie0424
+    - Coomy https://www.linkedin.com/in/coomy-chang-36454492?trk=nav_responsive_tab_profile_pic
