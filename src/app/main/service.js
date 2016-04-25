@@ -328,7 +328,7 @@
 
           return $http({
             method: 'GET',
-            url: config.apiUrl+'vessel/limit/30/offset/0'
+            url: config.apiUrl+'vessel/limit/15/offset/0'
           });
 
         }
