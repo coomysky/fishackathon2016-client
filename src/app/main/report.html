@@ -1,0 +1,63 @@
+
+<tool-tip>
+  <div class="fish-tool__content">
+    <div class="pull-right">
+      <a ng-click="vm.blackListShow=false">通報可疑船隻</a>｜<a ng-click="vm.blackListShow=true">黑名單</a>
+    </div>
+    <div ng-show="!vm.blackListShow">
+      <h3 class="fish-tool__title">通報可疑船隻</h3>
+      <div ng-show="vm.sendRes">
+        <h3 class="text-center"><i class="fa fa-check fa-3x" aria-hidden="true" ></i>通報成功</h3>
+        <a ng-click="vm.showRepo()" class="btn fish-tool__btn">繼續通報</a>
+      </div>
+      <form ng-show="!vm.sendRes">
+        <div class="form-group" >
+          <label>標題</label>
+          <input type="text" class="form-control" placeholder="事件名稱" ng-model="vm.repo.title">
+        </div>
+        <div class="form-group">
+          <label>船名</label>
+          <input type="text" class="form-control" ng-model="vm.repo.name">
+        </div>
+        <div class="form-group">
+          <label>MMIS</label>
+          <input type="text" class="form-control" placeholder="MMIS" ng-model="vm.repo.mmis">
+        </div>
+        <div class="form-group">
+          <label>IMO</label>
+          <input type="text" class="form-control" placeholder="IMO" ng-model="vm.repo.imo">
+        </div>
+        <div class="form-group">
+          <label>通報座標位置</label>
+          <input type="number" class="form-control" placeholder="lat" ng-model="vm.repo.lat">
+          <input type="number" class="form-control" placeholder="lon" ng-model="vm.repo.lon">
+        </div>
+        <div class="form-group">
+          <label>描述</label>
+          <textarea class="form-control" placeholder="描述"ng-model="vm.repo.description"> </textarea>
+        </div>
+        <button type="submit" class="btn fish-tool__btn" ng-click="vm.creatRepo()">Send</button>
+      </form>
+    </div>
+    <div ng-show="vm.blackListShow">
+      <h3 class="fish-tool__title">黑名單<p class="pull-left"ng-show="vm.isLoading"><i class="fa fa-spinner fa-spin fa-fw margin-bottom"></i></p></h3>
+
+      <table ng-table="vm.tableParams" show-filter="true" class="table table-bordered table-striped">
+        <tr ng-repeat="row in $data ">
+          <td title="'Boat Name'" filter="{name: 'text'}" sortable="'name'"><a ui-sref="main.search({type:'imo',id:row.imo})">{{row.name}}</a></td>
+          <td title="'IMO'" filter="{imo: 'text'}" sortable="'imo'"><a ui-sref="main.search({type:'imo',id:row.imo})">{{row.imo}}</a></td>
+          <td title="'Last Location'"><a ui-sref="main.search({type:'imo',id:row.imo})">({{row.lat}},{{row.lng}})</a></td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+
+
+</tool-tip>
+<h3><strong>你的座標</strong> (lat: {{vm.map.center.latitude}} lon:  {{vm.map.center.longitude}}) <p class="pull-left"ng-show="vm.isLoading"><i class="fa fa-spinner fa-spin fa-fw margin-bottom"></i></h3>
+
+<ng-map zoom="2" center="[{{vm.map.center.latitude}},{{vm.map.center.longitude}}]" style="height:800px;">
+  <marker position="[{{marker.lat}}, {{marker.lng}}]"
+    title="{{marker.name}}, {{marker.imo}}" ng-repeat=" marker in vm.blackList"></marker>
+</ng-map>

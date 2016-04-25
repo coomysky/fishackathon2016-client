@@ -1,0 +1,54 @@
+.wc-footer{
+  background: $brown;
+  width: 100%;
+  padding:10px 0px 200px 0;
+  position: relative;
+  z-index: 0;
+  color: #f5b4b4;
+  &:before{
+    content: '';
+    position: absolute;
+    top:0;
+    display: inline-block;
+    border-top: 1px #fecccc solid;
+    width: 100%;
+    height: 30px;
+    background-image: -webkit-radial-gradient(50% 0%, 50% 2.5em,rgba(255, 190, 190, 0.4),rgba(255, 255, 255, 0));
+    background-image: -moz-radial-gradient(50% 0%, 50% 2.5em,rgba(255, 190, 190, 0.4),rgba(255, 255, 255, 0));
+    background-repeat: repeat-y;
+    padding: 2px;
+  }
+  &__content{
+    padding-top: 70px;
+    text-align: center;
+  }
+  &__list{
+    position: relative;
+    padding-bottom: 50px;
+    &:after{
+      content: '';
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      left: 25%;
+      border-bottom: 1px $brown solid;
+      width: 50%;
+      height: 10px;
+      margin: 10px 0;
+      background-image: -webkit-radial-gradient(50% 100%, 50% 2.5em,rgba(255, 190, 190, 0.2),rgba(255, 255, 255, 0));
+      background-image: -moz-radial-gradient(50% 100%, 50% 2.5em,rgba(255, 190, 190, 0.2),rgba(255, 255, 255, 0));
+      background-repeat: repeat-y;
+      padding: 2px;
+    }
+  }
+  &__icon{
+    color: rgba(255, 255, 255, 0.11);
+  }
+  &__brand{
+    margin-top: 30px;
+    opacity: 0.2;
+    &>li{
+      padding-left: 50px;
+    }
+  }
+}

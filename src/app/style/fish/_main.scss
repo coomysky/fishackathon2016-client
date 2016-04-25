@@ -1,0 +1,88 @@
+.fish-main{
+  &__right{
+    padding: 20px;
+    overflow-y: auto;
+    height: 100%;
+  }
+  &__left{
+    height: 100%;
+    width: 100%;
+    -webkit-box-shadow: 7px 0px 12px -3px rgba(0,0,0,0.15);
+    -moz-box-shadow: 7px 0px 12px -3px rgba(0,0,0,0.15);
+    box-shadow: 7px 0px 12px -3px rgba(0,0,0,0.15);
+  }
+  &__logo{
+    width: 80%;
+    height: 200px;
+    background: url('../assets/images/logo.png');
+    margin: 10px auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  &__input{
+    width: 80%;
+    margin: 10px auto;
+    &>input, &>span>.btn-default{
+      height: 40px;
+    }
+  }
+  &__user{
+    padding:10px;
+  }
+  &__nav{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#32447a+0,404c77+50,243551+51,42497a+100 */
+
+    // padding: 10px;
+    margin: 50px 0;
+
+  }
+  &__li{
+    text-align: center;
+    height: 30px;
+    border-radius: 0;
+    position: relative;
+
+    &.-active{
+      & >a{
+        color:rgb(246, 166, 11);
+
+        &:after{
+          content: '';
+          display: block;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 7.5px 0 7.5px 13px;
+          border-color: transparent transparent transparent #3D4573;
+
+          position: absolute;
+          right: -10px;
+          top:13px;
+
+        }
+        // background: #fff !important;
+      }
+    }
+
+    &>a{
+      color:#fff;
+      padding: 20px;
+      width: 100%;
+      display: block;
+      margin: 10px 0;
+      border-radius: 0 !important;
+      background: rgb(50,68,122); /* Old browsers */
+      background: -moz-linear-gradient(-45deg, rgba(50,68,122,1) 0%, rgba(64,76,119,1) 50%, rgba(36,53,81,1) 51%, rgba(66,73,122,1) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(-45deg, rgba(50,68,122,1) 0%,rgba(64,76,119,1) 50%,rgba(36,53,81,1) 51%,rgba(66,73,122,1) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(135deg, rgba(50,68,122,1) 0%,rgba(64,76,119,1) 50%,rgba(36,53,81,1) 51%,rgba(66,73,122,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32447a', endColorstr='#42497a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+      &:hover,&:active,&:focus{
+        color:#ffe600;
+        cursor: pointer;
+      }
+
+
+    }
+  }
+}

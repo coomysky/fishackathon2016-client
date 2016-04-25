@@ -1,0 +1,64 @@
+.fish-landing{
+  padding: 50px;
+  padding-top: 100px;
+  &__wrapper{
+    background:  url('../assets/images/land3.svg');
+    height: 650px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    margin-top: 150px;
+  }
+  &__logo{
+    background: url('../assets/images/logo.png');
+    width: 550px;
+    height: 200px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top:100px;
+    right: 30%;
+  }
+  &__login{
+    width: 350px;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(#0d2647, 0.57);
+    position: absolute;
+    top: 280px;
+    right: 30%;
+    &-btn{
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+      background: rgb(254, 198, 3);
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fceabb+0,fccd4d+50,f8b500+51,fbdf93+100;Orange+3D+%235 */
+      background: #fceabb; /* Old browsers */
+      background: -moz-linear-gradient(-45deg,  #fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(-45deg,  #fceabb 0%,#fccd4d 50%,#f8b500 51%,#fbdf93 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(135deg,  #fceabb 0%,#fccd4d 50%,#f8b500 51%,#fbdf93 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+      display: block;
+      padding-top: 23px;
+      text-align: center;
+      position: absolute;
+      right: 10px;
+      top:40px;
+      color:#fff;
+      font-size: 12px;
+      font-weight: bolder;
+      cursor: pointer;
+      -webkit-box-shadow: 7px 9px 12px -3px rgba(0,0,0,0.24);
+      -moz-box-shadow: 7px 9px 12px -3px rgba(0,0,0,0.24);
+      box-shadow: 7px 9px 12px -3px rgba(0,0,0,0.24);
+      &:hover{
+        text-decoration: none;
+      }
+
+    }
+  }
+
+}

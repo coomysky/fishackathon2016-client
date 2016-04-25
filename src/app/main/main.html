@@ -1,0 +1,24 @@
+<div class="container-full fish-main" get-windows-height>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="fish-main__left" get-windows-height>
+        <div class="text-right fish-main__user"> {{vm.user}} | <a ng-click="vm.logout()">Logout</a></div>
+        <div class="fish-main__logo"></div>
+        <div class="input-group fish-main__input">
+          <input type="number" class="form-control " placeholder="MMSI" ng-keydown="vm.search()" ng-model="vm.mmsi">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button" ui-sref="main.search({type:'mmsi',id:vm.mmsi})">GO</button>
+          </span>
+        </div>
+        <ul class="nav nav-pills nav-stacked fish-main__nav ">
+          <li class="fish-main__li"><a  ui-sref="main.near" is-active>附近船隻資訊</a></li>
+          <li class="fish-main__li"><a  ui-sref="main.report" is-active>黑名單</a></li>
+          <li class="fish-main__li"><a  ui-sref="main.query" is-active>查詢</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-9 fish-main__right" get-windows-height>
+      <div ui-view></div>
+    </div>
+  </div>
+</div>
