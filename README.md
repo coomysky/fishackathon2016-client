@@ -1,6 +1,0 @@
-# For fishackathon in Taipe
-
-
-
-
-
