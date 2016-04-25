@@ -11,6 +11,9 @@
           var vm = this;
           vm.blackListShow = true;
           vm.isLoading = true;
+          vm.creatRepo = creatRepo;
+          vm.sendRes =false;
+          vm.showRepo = showRepo;
 
           vm.map = { center: { latitude: 23.18, longitude: 123.15 }, zoom: 8 };
 
@@ -28,11 +31,18 @@
 
 
           });
-          vm.clickMarker = clickMarker;
 
-          function clickMarker(){
-            console.log('testClick');
+          function showRepo(){
+            vm.sendRes = false;
+            vm.repo = '';
+            console.log(vm.repo);
           }
+          function creatRepo(){
+            vm.sendRes = true;
+            console.log(vm.repo);
+          }
+
+
 
 
 

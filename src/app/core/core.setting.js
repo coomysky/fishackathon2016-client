@@ -4,7 +4,7 @@
     angular.module('app.core')
         .constant('config', {
             appErrorPrefix: '[WC Error] ',
-            appTitle: 'WedChat',
+            appTitle: 'M.D.A.',
             locale: 'en_US',
             debugMode: true,
             tablePageCount: 50,
