@@ -1,0 +1,21 @@
+
+
+
+<div class="page-header">
+  <h1>M.D.A 綜合查詢系統 <p class="pull-left"ng-show="vm.isLoading"><i class="fa fa-spinner fa-spin fa-fw margin-bottom"></i></p></h1>
+</div>
+  <table ng-table="vm.tableParams" show-filter="true" class="table table-bordered table-striped">
+    <tr ng-repeat="row in $data ">
+      <td title="'Boat Picture'">
+        <a ui-sref="main.search({mmsi:row.mmsi})">
+          <img src="/assets/images/notfound.svg" class="img-responsive" alt="Responsive image" ng-show="!row.image" style="max-width:200px;">
+          <img src="{{row.image}}" ng-show="row.image" class="img-responsive" alt="Responsive image" style="max-width:200px;">
+        </a>
+      </td>
+      <td title="'Boat Name'" filter="{name: 'text'}" sortable="'name'"><a ui-sref="main.search({type:'mmsi',id:row.mmsi})">{{row.name}}</a></td>
+      <td title="'Country'" filter="{country: 'text'}" sortable="'country'"><a ui-sref="main.search({type:'mmsi',id:row.mmsi})">{{row.country}}</a></td>
+      <td title="'MMSI'" filter="{mmsi: 'text'}" sortable="'mmsi'"><a ui-sref="main.search({type:'mmsi',id:row.mmsi})">{{row.mmsi}}</a></td>
+      <td title="'IMO'" filter="{imo: 'text'}" sortable="'imo'"><a ng-show="row.imo" ui-sref="main.search({type:'mmsi',id:row.mmsi})">{{row.imo}}</a></td>
+      <td title="'Report Status'" filter="{reportStatus: 'text'}" sortable="'reportStatus'"><a class="text-danger" ui-sref="main.search({type:'mmsi',id:row.mmsi})">{{row.reportStatus}}</a></td>
+    </tr>
+  </table>

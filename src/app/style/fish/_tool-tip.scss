@@ -1,0 +1,69 @@
+.tool-tip{
+  position: fixed;
+  height: 100%;
+  top:0;
+  z-index: 3;
+  right:0;
+  width: 30%;
+  &.-open{
+    width: 30%;
+  }
+  &.-close{
+    width: 0%;
+  }
+
+  &__container{
+    width: 100%;
+    background: rgba(#ffffff, 0.6);
+    padding-top: 10px;
+    -webkit-box-shadow: -2px 0px 7px 0px rgba(102,102,102,0.28);
+    -moz-box-shadow: -2px 0px 7px 0px rgba(102,102,102,0.28);
+    box-shadow: -2px 0px 7px 0px rgba(102,102,102,0.28);
+    height: 100%;
+
+  }
+
+  &__close{
+    position: fixed;
+    width: 40px;
+    background: #0d2647;
+    top:20px;
+    right: 30%;
+    -webkit-border-top-left-radius: 50%;
+    -webkit-border-bottom-left-radius: 50%;
+    -moz-border-radius-topleft: 50%;
+    -moz-border-radius-bottomleft: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    color:#fff;
+    padding: 10px;
+    -webkit-box-shadow: -2px 0px 7px 0px rgba(102,102,102,0.28);
+    -moz-box-shadow: -2px 0px 7px 0px rgba(102,102,102,0.28);
+    box-shadow: -2px 0px 7px 0px rgba(102,102,102,0.28);
+    cursor: pointer;
+
+  }
+  &__open{
+    position: fixed;
+    width: 40px;
+    background: #0d2647;
+    top:20px;
+    right: 0px;
+    -webkit-border-top-left-radius: 50%;
+    -webkit-border-bottom-left-radius: 50%;
+    -moz-border-radius-topleft: 50%;
+    -moz-border-radius-bottomleft: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    color:#fff;
+    padding: 10px;
+    -webkit-box-shadow: -2px 0px 7px 0px rgba(102,102,102,0.28);
+    -moz-box-shadow: -2px 0px 7px 0px rgba(102,102,102,0.28);
+    box-shadow: -2px 0px 7px 0px rgba(102,102,102,0.28);
+    cursor: pointer;
+    z-index: 2;
+  }
+
+
+
+}

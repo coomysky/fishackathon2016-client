@@ -1,0 +1,46 @@
+.wc-wrapper{
+  height: $wrapper-height;
+  position: relative;
+  padding-top: 10px;
+  z-index: 0;
+
+  &__right{
+    height: $wrapper-height;
+  }
+  &__left{
+    height: $wrapper-height;
+    background: $brown;
+    background-image: url('../assets/images/wedding.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    &.-venues{
+        background-image: url('../assets/images/white_church.png');
+    }
+    &.-honeymoon{
+        background-image: url('../assets/images/beach.jpg');
+    }
+    &.-ring{
+        background-image: url('../assets/images/ring.jpg');
+    }
+    &.-photo{
+        background-image: url('../assets/images/photo.jpg');
+    }
+    &.-dress{
+        background-image: url('../assets/images/slide01.jpg');
+    }
+  }
+}
+
+
+
+@media screen and (max-width:$md) {
+  .wc-wrapper{
+    height: ($wrapper-height + 100px);
+    margin-top: 30px;
+    &__left{
+      height: ($wrapper-height + 100px);
+    }
+  }
+}
